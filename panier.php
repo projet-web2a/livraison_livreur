@@ -471,10 +471,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	                                     <input class="btn btn-dark" type="submit" name="ajouter" value="Ajouter Livraison">
 	                                 <br>
 	                     </section>
-	                     </br>
-									
-	                                     <input class="btn btn-dark" type="submit" name="modifier" value="Modifier Livraison">
-	                                 <br>
+	                     >
 	                 </form>
 
 

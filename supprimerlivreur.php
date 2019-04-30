@@ -26,7 +26,7 @@ else
 
 {
 	/*echo '<script language="javascript">';
-echo 'window.alert("Ce livreur possde encore des livraison")';
+echo 'window.alert("Ce livreur ne peut pas être supprimé car il possède encore des livraisons à effectuer")';
 echo '</script>'; */
 header('Location: afficherlivreur.php?sup=1');
 

@@ -198,7 +198,7 @@ class livraisonC
             $dateLivraison=$livraison->getdateLivraison();
       
             $req->bindValue(':dateLivraison',$dateLivraison);
-         //   $req->bindValue(':idLivraison',$idLivraison);
+           $req->bindValue(':idLivraison',$idLivraison);
 
             $req->execute();
         }  

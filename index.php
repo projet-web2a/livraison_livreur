@@ -1,721 +1,1555 @@
-﻿<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> EyeZone | Admin </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="robots" content="all,follow">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-    <!-- Fontastic Custom icon font-->
-    <link rel="stylesheet" href="css/fontastic.css">
-    <!-- Google fonts - Poppins -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-  </head>
-  <body>
-    <div class="page">
-      <!-- Main Navbar-->
-      <header class="header">
-        <nav class="navbar">
-          <!-- Search Box-->
-          <div class="search-box">
-            <button class="dismiss"><i class="icon-close"></i></button>
-            <form id="searchForm" action="#" role="search">
-              <input type="search" placeholder="What are you looking for..." class="form-control">
-            </form>
-          </div>
-          <div class="container-fluid">
-            <div class="navbar-holder d-flex align-items-center justify-content-between">
-              <!-- Navbar Header-->
-              <div class="navbar-header">
-                <!-- Navbar Brand --><a href="index.php" class="navbar-brand d-none d-sm-inline-block">
-                  <div class="brand-text d-none d-lg-inline-block"> EyeZone</div>
-                  <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div></a>
-                <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
-              </div>
-              <!-- Navbar Menu -->
-              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
-                <!-- Notifications-->
-                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red badge-corner">12</span></a>
-                  <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-                          <div class="notification-time"><small>10 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
-                  </ul>
-                </li>
-                <!-- Messages                        -->
-                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange badge-corner">10</span></a>
-                  <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
-                        <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
-                        <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
-                        <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages   </strong></a></li>
-                  </ul>
-                </li>
-                <!-- Languages dropdown    -->
-                <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
-                  <ul aria-labelledby="languages" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/DE.png" alt="English" class="mr-2">German</a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/FR.png" alt="English" class="mr-2">French                                         </a></li>
-                  </ul>
-                </li>
-                <!-- Logout    -->
-                <li class="nav-item"><a href="login.ph" class="nav-link logout"> <span class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <div class="page-content d-flex align-items-stretch"> 
-        <!-- Side Navbar -->
-        <nav class="side-navbar">
-          <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-            <div class="title">
-              <h1 class="h4">Wafa Rabeh</h1>
-              <p> Manager</p>
-            </div>
-          </div>
-          <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
-          <ul class="list-unstyled">
-            <li class="active"><a href="index.php"> <em class="icon-home"></em>  Home </a></li>
-            <li><a href="tables.php"> <i class="icon-grid"></i>Produits </a></li>
-            <li><a href="commande.php"> <i class="fa fa-bar-chart"></i>Commandes </a></li>
-            <li><a href="forms.php"> <i class="icon-padnote"></i>Clients </a></li>
-            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Marketing </a>
-              <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                <li><a href="#">Page</a></li>
-                <li><a href="#">Page</a></li>
-                <li><a href="#">Page</a></li>
-              </ul>
-            </li>
-            <li><a href="livraison.php"> <i class="icon-interface-windows"></i>Livraisons </a></li>
-            <li><a href="afficherlivreur.php"> <i class="icon-interface-windows"></i>Livreur </a></li>
 
-            <li><a href="tables.php"> <i class="icon-grid"></i>Service aprés vente </a></li>
-          </ul><span class="heading">Extras</span>
-          <ul class="list-unstyled">
-            <li> <a href="#"> <i class="icon-flask"></i>Demo </a></li>
-            <li> <a href="#"> <i class="icon-screen"></i>Demo </a></li>
-            <li> <a href="#"> <i class="icon-mail"></i>Demo </a></li>
-            <li> <a href="#"> <i class="icon-picture"></i>Demo </a></li>
-          </ul>
-        </nav>
-        <div class="content-inner">
-          <!-- Page Header-->
-          <header class="page-header">
-            <div class="container-fluid">
-              <h2 class="no-margin-bottom">Dashboard</h2>
-            </div>
-          </header>
-          <!-- Dashboard Counts Section-->
-          <section class="dashboard-counts no-padding-bottom">
-            <div class="container-fluid">
-              <div class="row bg-white has-shadow">
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-violet"><i class="icon-user"></i></div>
-                    <div class="title"><span>New<br>Clients</span>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>25</strong></div>
-                  </div>
-                </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                    <div class="title"><span>Work<br>Orders</span>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>70</strong></div>
-                  </div>
-                </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-green"><i class="icon-bill"></i></div>
-                    <div class="title"><span>New<br>Invoices</span>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 40%; height: 4px;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>40</strong></div>
-                  </div>
-                </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-orange"><i class="icon-check"></i></div>
-                    <div class="title"><span>Open<br>Cases</span>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>50</strong></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Dashboard Header Section    -->
-          <section class="dashboard-header">
-            <div class="container-fluid">
-              <div class="row">
-                <!-- Statistics -->
-                <div class="statistics col-lg-3 col-12">
-                  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
-                    <div class="text"><strong>234</strong><br><small>Applications</small></div>
-                  </div>
-                  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
-                    <div class="text"><strong>152</strong><br><small>Interviews</small></div>
-                  </div>
-                  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
-                    <div class="text"><strong>147</strong><br><small>Forwards</small></div>
-                  </div>
-                </div>
-                <!-- Line Chart            -->
-                <div class="chart col-lg-6 col-12">
-                  <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
-                    <canvas id="lineCahrt"></canvas>
-                  </div>
-                </div>
-                <div class="chart col-lg-3 col-12">
-                  <!-- Bar Chart   -->
-                  <div class="bar-chart has-shadow bg-white">
-                    <div class="title"><strong class="text-violet">95%</strong><br><small>Current Server Uptime</small></div>
-                    <canvas id="barChartHome"></canvas>
-                  </div>
-                  <!-- Numbers-->
-                  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-green"><i class="fa fa-line-chart"></i></div>
-                    <div class="text"><strong>99.9%</strong><br><small>Success Rate</small></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Projects Section-->
-          <section class="projects no-padding-top">
-            <div class="container-fluid">
-              <!-- Project-->
-              <div class="project">
-                <div class="row bg-white has-shadow">
-                  <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
-                    <div class="project-title d-flex align-items-center">
-                      <div class="image has-shadow"><img src="img/project-1.jpg" alt="..." class="img-fluid"></div>
-                      <div class="text">
-                        <h3 class="h4">Project Title</h3><small>Lorem Ipsum Dolor</small>
-                      </div>
-                    </div>
-                    <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
-                  </div>
-                  <div class="right-col col-lg-6 d-flex align-items-center">
-                    <div class="time"><i class="fa fa-clock-o"></i>12:00 PM </div>
-                    <div class="comments"><i class="fa fa-comment-o"></i>20</div>
-                    <div class="project-progress">
-                      <div class="progress">
-                        <div role="progressbar" style="width: 45%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Project-->
-              <div class="project">
-                <div class="row bg-white has-shadow">
-                  <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
-                    <div class="project-title d-flex align-items-center">
-                      <div class="image has-shadow"><img src="img/project-2.jpg" alt="..." class="img-fluid"></div>
-                      <div class="text">
-                        <h3 class="h4">Project Title</h3><small>Lorem Ipsum Dolor</small>
-                      </div>
-                    </div>
-                    <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
-                  </div>
-                  <div class="right-col col-lg-6 d-flex align-items-center">
-                    <div class="time"><i class="fa fa-clock-o"></i>12:00 PM </div>
-                    <div class="comments"><i class="fa fa-comment-o"></i>20</div>
-                    <div class="project-progress">
-                      <div class="progress">
-                        <div role="progressbar" style="width: 60%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Project-->
-              <div class="project">
-                <div class="row bg-white has-shadow">
-                  <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
-                    <div class="project-title d-flex align-items-center">
-                      <div class="image has-shadow"><img src="img/project-3.jpg" alt="..." class="img-fluid"></div>
-                      <div class="text">
-                        <h3 class="h4">Project Title</h3><small>Lorem Ipsum Dolor</small>
-                      </div>
-                    </div>
-                    <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
-                  </div>
-                  <div class="right-col col-lg-6 d-flex align-items-center">
-                    <div class="time"><i class="fa fa-clock-o"></i>12:00 PM </div>
-                    <div class="comments"><i class="fa fa-comment-o"></i>20</div>
-                    <div class="project-progress">
-                      <div class="progress">
-                        <div role="progressbar" style="width: 50%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Project-->
-              <div class="project">
-                <div class="row bg-white has-shadow">
-                  <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
-                    <div class="project-title d-flex align-items-center">
-                      <div class="image has-shadow"><img src="img/project-4.jpg" alt="..." class="img-fluid"></div>
-                      <div class="text">
-                        <h3 class="h4">Project Title</h3><small>Lorem Ipsum Dolor</small>
-                      </div>
-                    </div>
-                    <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
-                  </div>
-                  <div class="right-col col-lg-6 d-flex align-items-center">
-                    <div class="time"><i class="fa fa-clock-o"></i>12:00 PM </div>
-                    <div class="comments"><i class="fa fa-comment-o"></i>20</div>
-                    <div class="project-progress">
-                      <div class="progress">
-                        <div role="progressbar" style="width: 50%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Client Section-->
-          <section class="client no-padding-top">
-            <div class="container-fluid">
-              <div class="row">
-                <!-- Work Amount  -->
-                <div class="col-lg-4">
-                  <div class="work-amount card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <h3>Work Hours</h3><small>Lorem ipsum dolor sit amet.</small>
-                      <div class="chart text-center">
-                        <div class="text"><strong>90</strong><br><span>Hours</span></div>
-                        <canvas id="pieChart"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Client Profile -->
-                <div class="col-lg-4">
-                  <div class="client card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard2" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-body text-center">
-                      <div class="client-avatar"><img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle">
-                        <div class="status bg-green"></div>
-                      </div>
-                      <div class="client-title">
-                        <h3>Jason Doe</h3><span>Web Developer</span><a href="#">Follow</a>
-                      </div>
-                      <div class="client-info">
-                        <div class="row">
-                          <div class="col-4"><strong>20</strong><br><small>Photos</small></div>
-                          <div class="col-4"><strong>54</strong><br><small>Videos</small></div>
-                          <div class="col-4"><strong>235</strong><br><small>Tasks</small></div>
-                        </div>
-                      </div>
-                      <div class="client-social d-flex justify-content-between"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a><a href="#" target="_blank"><i class="fa fa-twitter"></i></a><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a><a href="#" target="_blank"><i class="fa fa-instagram"></i></a><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Total Overdue             -->
-                <div class="col-lg-4">
-                  <div class="overdue card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <h3>Total Overdue</h3><small>Lorem ipsum dolor sit amet.</small>
-                      <div class="number text-center">$20,000</div>
-                      <div class="chart">
-                        <canvas id="lineChart1">                               </canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Feeds Section-->
-          <section class="feeds no-padding-top">
-            <div class="container-fluid">
-              <div class="row">
-                <!-- Trending Articles-->
-                <div class="col-lg-6">
-                  <div class="articles card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard4" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                      <h2 class="h3">Trending Articles   </h2>
-                      <div class="badge badge-rounded bg-green">4 New       </div>
-                    </div>
-                    <div class="card-body no-padding">
-                      <div class="item d-flex align-items-center">
-                        <div class="image"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="text"><a href="#">
-                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by Aria Smith.   </small></div>
-                      </div>
-                      <div class="item d-flex align-items-center">
-                        <div class="image"><img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="text"><a href="#">
-                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by Frank Williams.   </small></div>
-                      </div>
-                      <div class="item d-flex align-items-center">
-                        <div class="image"><img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="text"><a href="#">
-                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by Ashley Wood.   </small></div>
-                      </div>
-                      <div class="item d-flex align-items-center">
-                        <div class="image"><img src="img/avatar-4.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="text"><a href="#">
-                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by Jason Doe.   </small></div>
-                      </div>
-                      <div class="item d-flex align-items-center">
-                        <div class="image"><img src="img/avatar-5.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="text"><a href="#">
-                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by Sam Martinez.   </small></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Check List -->
-                <div class="col-lg-6">
-                  <div class="checklist card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard5" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">           
-                      <h2 class="h3">To Do List </h2>
-                    </div>
-                    <div class="card-body no-padding">
-                      <div class="item d-flex">
-                        <input type="checkbox" id="input-1" name="input-1" class="checkbox-template">
-                        <label for="input-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
-                      </div>
-                      <div class="item d-flex">
-                        <input type="checkbox" id="input-2" name="input-2" class="checkbox-template">
-                        <label for="input-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
-                      </div>
-                      <div class="item d-flex">
-                        <input type="checkbox" id="input-3" name="input-3" class="checkbox-template">
-                        <label for="input-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
-                      </div>
-                      <div class="item d-flex">
-                        <input type="checkbox" id="input-4" name="input-4" class="checkbox-template">
-                        <label for="input-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
-                      </div>
-                      <div class="item d-flex">
-                        <input type="checkbox" id="input-5" name="input-5" class="checkbox-template">
-                        <label for="input-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
-                      </div>
-                      <div class="item d-flex">
-                        <input type="checkbox" id="input-6" name="input-6" class="checkbox-template">
-                        <label for="input-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Updates Section                                                -->
-          <section class="updates no-padding-top">
-            <div class="container-fluid">
-              <div class="row">
-                <!-- Recent Updates-->
-                <div class="col-lg-4">
-                  <div class="recent-updates card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard6" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header">
-                      <h3 class="h4">Recent Updates</h3>
-                    </div>
-                    <div class="card-body no-padding">
-                      <!-- Item-->
-                      <div class="item d-flex justify-content-between">
-                        <div class="info d-flex">
-                          <div class="icon"><i class="icon-rss-feed"></i></div>
-                          <div class="title">
-                            <h5>Lorem ipsum dolor sit amet.</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
-                          </div>
-                        </div>
-                        <div class="date text-right"><strong>24</strong><span>May</span></div>
-                      </div>
-                      <!-- Item-->
-                      <div class="item d-flex justify-content-between">
-                        <div class="info d-flex">
-                          <div class="icon"><i class="icon-rss-feed"></i></div>
-                          <div class="title">
-                            <h5>Lorem ipsum dolor sit amet.</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
-                          </div>
-                        </div>
-                        <div class="date text-right"><strong>24</strong><span>May</span></div>
-                      </div>
-                      <!-- Item        -->
-                      <div class="item d-flex justify-content-between">
-                        <div class="info d-flex">
-                          <div class="icon"><i class="icon-rss-feed"></i></div>
-                          <div class="title">
-                            <h5>Lorem ipsum dolor sit amet.</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
-                          </div>
-                        </div>
-                        <div class="date text-right"><strong>24</strong><span>May</span></div>
-                      </div>
-                      <!-- Item-->
-                      <div class="item d-flex justify-content-between">
-                        <div class="info d-flex">
-                          <div class="icon"><i class="icon-rss-feed"></i></div>
-                          <div class="title">
-                            <h5>Lorem ipsum dolor sit amet.</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
-                          </div>
-                        </div>
-                        <div class="date text-right"><strong>24</strong><span>May</span></div>
-                      </div>
-                      <!-- Item-->
-                      <div class="item d-flex justify-content-between">
-                        <div class="info d-flex">
-                          <div class="icon"><i class="icon-rss-feed"></i></div>
-                          <div class="title">
-                            <h5>Lorem ipsum dolor sit amet.</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
-                          </div>
-                        </div>
-                        <div class="date text-right"><strong>24</strong><span>May</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Daily Feeds -->
-                <div class="col-lg-4">
-                  <div class="daily-feeds card"> 
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard7" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header">
-                      <h3 class="h4">Daily Feeds</h3>
-                    </div>
-                    <div class="card-body no-padding">
-                      <!-- Item-->
-                      <div class="item">
-                        <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="img/avatar-5.jpg" alt="person" class="img-fluid rounded-circle"></a>
-                            <div class="content">
-                              <h5>Aria Smith</h5><span>Posted a new blog </span>
-                              <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
-                            </div>
-                          </div>
-                          <div class="date text-right"><small>5min ago</small></div>
-                        </div>
-                      </div>
-                      <!-- Item-->
-                      <div class="item"> 
-                        <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="img/avatar-2.jpg" alt="person" class="img-fluid rounded-circle"></a>
-                            <div class="content">
-                              <h5>Frank Williams</h5><span>Posted a new blog </span>
-                              <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
-                              <div class="CTAs"><a href="#" class="btn btn-xs btn-secondary"><i class="fa fa-thumbs-up"> </i>Like</a><a href="#" class="btn btn-xs btn-secondary"><i class="fa fa-heart"> </i>Love    </a></div>
-                            </div>
-                          </div>
-                          <div class="date text-right"><small>5min ago</small></div>
-                        </div>
-                      </div>
-                      <!-- Item-->
-                      <div class="item clearfix">
-                        <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="img/avatar-3.jpg" alt="person" class="img-fluid rounded-circle"></a>
-                            <div class="content">
-                              <h5>Ashley Wood</h5><span>Posted a new blog </span>
-                              <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
-                            </div>
-                          </div>
-                          <div class="date text-right"><small>5min ago</small></div>
-                        </div>
-                        <div class="quote has-shadow"> <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years.</small></div>
-                        <div class="CTAs pull-right"><a href="#" class="btn btn-xs btn-secondary"><i class="fa fa-thumbs-up"> </i>Like</a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Recent Activities -->
-                <div class="col-lg-4">
-                  <div class="recent-activities card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard8" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header">
-                      <h3 class="h4">Recent Activities</h3>
-                    </div>
-                    <div class="card-body no-padding">
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-4 date-holder text-right">
-                            <div class="icon"><i class="icon-clock"></i></div>
-                            <div class="date"> <span>6:00 am</span><br><span class="text-info">6 hours ago</span></div>
-                          </div>
-                          <div class="col-8 content">
-                            <h5>Meeting</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-4 date-holder text-right">
-                            <div class="icon"><i class="icon-clock"></i></div>
-                            <div class="date"> <span>6:00 am</span><br><span class="text-info">6 hours ago</span></div>
-                          </div>
-                          <div class="col-8 content">
-                            <h5>Meeting</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-4 date-holder text-right">
-                            <div class="icon"><i class="icon-clock"></i></div>
-                            <div class="date"> <span>6:00 am</span><br><span class="text-info">6 hours ago</span></div>
-                          </div>
-                          <div class="col-8 content">
-                            <h5>Meeting</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Page Footer-->
-          <footer class="main-footer">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-sm-6">
-                  <p>EyeZone</p>
-                </div>
-                <div class="col-sm-6 text-right">
-                  <p>&nbsp;</p>
-                  <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                </div>
-              </div>
-            </div>
-          </footer>
-        </div>
-      </div>
-    </div>
-    <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="js/charts-home.js"></script>
-    <!-- Main File-->
-    <script src="js/front.js"></script>
-  </body>
+<?php session_start ();
+if(isset($_SESSION["pseudo"]))
+{
+?>
+
+
+<?php
+require 'C:/xampp/htdocs/eyezone/core/classpanier.php';
+$panier=creationPanier();
+?>
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	
+</head>
+<?php require 'header.php'; ?>
+<body>
+	<div class="banner-top container-fluid" id="home">
+		<!-- header -->
+		<header>
+			<?php include 'navbar.php'; ?>
+		</header>
+		<!-- //header -->
+		<!-- banner -->
+		<div class="banner">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<div class="carousel-caption text-center">
+							<h3>Men’s eyewear
+								<span>Cool summer sale 50% off</span>
+							</h3>
+							<a href="shop.php" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+						</div>
+					</div>
+					<div class="carousel-item item2">
+						<div class="carousel-caption text-center">
+							<h3>Women’s eyewear
+								<span>Want to Look Your Best?</span>
+							</h3>
+							<a href="shop.php" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+
+						</div>
+					</div>
+					<div class="carousel-item item3">
+						<div class="carousel-caption text-center">
+							<h3>Men’s eyewear
+								<span>Cool summer sale 50% off</span>
+							</h3>
+							<a href="shop.php" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+
+						</div>
+					</div>
+					<div class="carousel-item item4">
+						<div class="carousel-caption text-center">
+							<h3>Women’s eyewear
+								<span>Want to Look Your Best?</span>
+							</h3>
+							<a href="shop.php" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+			<!--//banner -->
+		</div>
+	</div>
+	<!--//banner-sec-->
+	<section class="banner-bottom-wthreelayouts py-lg-5 py-3">
+		<div class="container-fluid">
+			<div class="inner-sec-shop px-lg-4 px-3">
+				<h3 class="tittle-w3layouts my-lg-4 my-4">New Arrivals for you </h3>
+				<div class="row">
+					<!-- /womens -->
+					<div class="col-md-3 product-men women_two">
+						<div class="product-googles-info googles">
+							<div class="men-pro-item">
+								<div class="men-thumb-item">
+									<img src="images/s1.jpg" class="img-fluid" alt="">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.php" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+</div>
+								<div class="item-info-product">
+									<div class="info-product-price">
+										<div class="grid_meta">
+											<div class="product_price">
+											  <h4> <a href="single.php">FENDI</a></h4>
+											  <div class="grid-price mt-2"><span class="money">1890.000</span>
+											  <span class="money">DT</span></div>
+											</div>
+											<ul class="stars">
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-half-o" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="googles single-item hvr-outline-out">
+											<form   action="ajouterpannier.php?refe=<?=14?>" method="post">
+												<input type="hidden" name="cmd" value="_cart">
+												<input type="hidden" name="add" value="1">
+												<input type="hidden" name="googles_item" value="FENDI">
+												<input type="hidden" name="amount" value="1890.00">
+												<button type="submit" class="googles-cart pgoogles-cart ">
+													<i class="fas fa-cart-plus "></i>
+												</button>
+
+												
+											</form>
+
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-men women_two">
+						<div class="product-googles-info googles">
+							<div class="men-pro-item">
+								<div class="men-thumb-item">
+									<img src="images/s2.jpg" class="img-fluid" alt="">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.php" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									</div>
+								<div class="item-info-product">
+
+									<div class="info-product-price">
+										<div class="grid_meta">
+											<div class="product_price">
+											  <h4><a href="single.php">DIOR (Rose)</a> </h4>
+											  <div class="grid-price mt-2"><span class="money">325.00</span>
+											  <span class="money">DT</span></div>
+											</div>
+											<ul class="stars">
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-half-o" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-o" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="googles single-item hvr-outline-out">
+											<form action="ajouterpannier.php?refe=<?=3?>"  method="post">
+												<input type="hidden" name="cmd" value="_cart">
+												<input type="hidden" name="add" value="1">
+												<input type="hidden" name="googles_item" value="DIOR (Rose)">
+												<input type="hidden" name="amount" value="325.00">
+												<button type="submit" class="googles-cart pgoogles-cart">
+													<i class="fas fa-cart-plus"></i>
+												</button>
+
+												
+											</form>
+
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-men women_two">
+						<div class="product-googles-info googles">
+							<div class="men-pro-item">
+								<div class="men-thumb-item">
+									<img src="images/s3.jpg" class="img-fluid" alt="">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.php" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+									
+								</div>
+								<div class="item-info-product">
+
+									<div class="info-product-price">
+										<div class="grid_meta">
+											<div class="product_price">
+											  <h4><a href="single.php">GIGI BARCELONA</a></h4>
+											  <div class="grid-price mt-2">
+													<span class="money ">575.000</span>
+                                                <span class="money ">DT</span></div>
+											</div>
+											<ul class="stars">
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-half-o" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="googles single-item hvr-outline-out">
+											<form action="ajouterpannier.php?refe=<?=4?>" method="post">
+												<input type="hidden" name="cmd" value="_cart">
+												<input type="hidden" name="add" value="1">
+												<input type="hidden" name="googles_item" value="GIGI BARCELONA">
+												<input type="hidden" name="amount" value="575.00">
+												<button type="submit" class="googles-cart pgoogles-cart">
+													<i class="fas fa-cart-plus"></i>
+												</button>
+												
+											</form>
+
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-men women_two">
+						<div class="product-googles-info googles">
+							<div class="men-pro-item">
+								<div class="men-thumb-item">
+									<img src="images/s4.jpg" class="img-fluid" alt="">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.php" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+</div>
+								<div class="item-info-product">
+
+									<div class="info-product-price">
+										<div class="grid_meta">
+											<div class="product_price">
+											  <h4><a href="single.php">GUCCI</a></h4>
+											  <div class="grid-price mt-2">
+													<span class="money ">2200.000</span>
+										        <span class="money ">DT</span></div>
+											</div>
+											<ul class="stars">
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-half-o" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-o" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="googles single-item hvr-outline-out">
+											<form action="ajouterpannier.php?refe=<?=2?>" method="post">
+												<input type="hidden" name="cmd" value="_cart">
+												<input type="hidden" name="add" value="1">
+												<input type="hidden" name="googles_item" value="GUCCI">
+												<input type="hidden" name="amount" value="2200.000">
+												<button type="submit" class="googles-cart pgoogles-cart">
+													<i class="fas fa-cart-plus"></i>
+												</button>
+
+												
+											</form>
+
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //womens -->
+				<!-- /mens -->
+				<div class="row mt-lg-3 mt-0">
+					<!-- /womens -->
+					<div class="col-md-3 product-men women_two">
+						<div class="product-googles-info googles">
+							<div class="men-pro-item">
+								<div class="men-thumb-item">
+									<img src="images/m1.jpg" class="img-fluid" alt="">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.php" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+</div>
+								<div class="item-info-product">
+
+									<div class="info-product-price">
+										<div class="grid_meta">
+											<div class="product_price">
+											  <h4> <a href="single.php">TOMMY HILFIGER </a> </h4>
+												<div class="grid-price mt-2"><span class="money">700.000</span>
+								                <span class="money">DT</span>
+									         </div>
+											</div>
+											<ul class="stars">
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-half-o" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+									<a href="ajouterpannier.php?refe=<?=1?>" >
+										<div class="googles single-item hvr-outline-out">
+											<form action="ajouterpannier.php?refe=<?=1?>" method="post" >
+												<input type="hidden" name="cmd" value="_cart">
+												<input type="hidden" name="add" value="1">
+												<input type="hidden" name="googles_item" value="TOMMY HILFIGER">
+										   		<input type="hidden" name="amount" value="700.00"> 
+
+										<button type="submit"  class="googles-cart pgoogles-cart"  > <i class="fas fa-cart-plus"></i> </button>	
+											</form>
+										</div>
+									</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-men women_two">
+						<div class="product-googles-info googles">
+							<div class="men-pro-item">
+								<div class="men-thumb-item">
+									<img src="images/m2.jpg" class="img-fluid" alt="">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.php" class="link-product-add-cart">Quick View</a>
+										</div>
+
+									</div>
+</div>
+								<div class="item-info-product">
+
+									<div class="info-product-price">
+										<div class="grid_meta">
+											<div class="product_price">
+											  <h4><a href="single.php">TED BAKER</a></h4>
+											  <div class="grid-price mt-2">
+													<span class="money ">725.000</span>
+										        <span class="money ">DT</span></div>
+											</div>
+											<ul class="stars">
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-half-o" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-o" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="googles single-item hvr-outline-out">
+											<form action="ajouterpannier.php?refe=<?=5?>" method="post">
+												<input type="hidden" name="cmd" value="_cart">
+												<input type="hidden" name="add" value="1">
+												<input type="hidden" name="googles_item" value="TED BAKER">
+												<input type="hidden" name="amount" value="725.00">
+												<button type="submit" class="googles-cart pgoogles-cart">
+													<i class="fas fa-cart-plus"></i>
+												</button>
+
+												
+											</form>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-men women_two">
+						<div class="product-googles-info googles">
+							<div class="men-pro-item">
+								<div class="men-thumb-item">
+									<img src="images/m3.jpg" class="img-fluid" alt="">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.php" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+</div>
+								<div class="item-info-product">
+
+									<div class="info-product-price">
+										<div class="grid_meta">
+											<div class="product_price">
+											  <h4><a href="single.php">PERSOL</a></h4>
+											  <div class="grid-price mt-2">
+													<span class="money ">475.00</span>
+										        <span class="money ">DT</span></div>
+											</div>
+											<ul class="stars">
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-half-o" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="googles single-item hvr-outline-out">
+											<form action="ajouterpannier.php?refe=<?=6?>" method="post">
+												<input type="hidden" name="cmd" value="_cart">
+												<input type="hidden" name="add" value="1">
+												<input type="hidden" name="googles_item" value="PERSOL">
+												<input type="hidden" name="amount" value="475.00">
+												<button type="submit" class="googles-cart pgoogles-cart">
+													<i class="fas fa-cart-plus"></i>
+												</button>
+											
+											</form>
+
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-men women_two">
+						<div class="product-googles-info googles">
+							<div class="men-pro-item">
+								<div class="men-thumb-item">
+									<img src="images/m4.jpg" class="img-fluid" alt="">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.php" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+</div>
+								<div class="item-info-product">
+
+									<div class="info-product-price">
+										<div class="grid_meta">
+											<div class="product_price">
+											  <h4><a href="single.php">RAY BAN</a></h4>
+											  <div class="grid-price mt-2">
+													<span class="money ">525.00</span>
+										        <span class="money ">DT</span></div>
+											</div>
+											<ul class="stars">
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-half-o" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-star-o" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="googles single-item hvr-outline-out">
+											<form action="ajouterpannier.php?refe=<?=7?>" method="post">
+												<input type="hidden" name="cmd" value="_cart">
+												<input type="hidden" name="add" value="1">
+												<input type="hidden" name="googles_item" value="RAY BAN">
+												<input type="hidden" name="amount" value="525.00">
+												<button type="submit" class="googles-cart pgoogles-cart">
+													<i class="fas fa-cart-plus"></i>
+												</button>
+											</form>
+
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /mens -->
+				</div>
+				<!--//row-->
+				<!--/meddle-->
+				<div class="row">
+					<div class="col-md-12 middle-slider my-4">
+						<div class="middle-text-info ">
+
+							<h3 class="tittle-w3layouts two text-center my-lg-4 mt-3">Summer Flash sale</h3>
+							<div class="simply-countdown-custom" id="simply-countdown-custom"></div>
+
+						</div>
+					</div>
+				</div>
+				<!--//meddle-->
+				<!--/slide-->
+				<div class="slider-img mid-sec">
+					<!--//banner-sec-->
+					<div class="mid-slider">
+						<div class="owl-carousel owl-theme row">
+							<div class="item">
+								<div class="gd-box-info text-center">
+									<div class="product-men women_two bot-gd">
+										<div class="product-googles-info slide-img googles">
+											<div class="men-pro-item">
+												<div class="men-thumb-item">
+													<img src="images/s5.jpg" class="img-fluid" alt="">
+													<div class="men-cart-pro">
+														<div class="inner-men-cart-pro">
+															<a href="single.php" class="link-product-add-cart">Quick View</a>
+														</div>
+													</div>
+</div>
+												<div class="item-info-product">
+
+													<div class="info-product-price">
+														<div class="grid_meta">
+															<div class="product_price">
+																<h4>
+																	<a href="single.php">RAY BAN JUNIOR </a>
+																</h4>
+																<div class="grid-price mt-2"><span class="money ">325.00 DT</span></div>
+															</div>
+															<ul class="stars">
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+														<div class="googles single-item hvr-outline-out">
+															<form action="ajouterpannier.php?refe=<?=8?>" method="post">
+																<input type="hidden" name="cmd" value="_cart">
+																<input type="hidden" name="add" value="1">
+																<input type="hidden" name="googles_item" value="RAY BAN JUNIOR">
+																<input type="hidden" name="amount" value="325.00">
+																<button type="submit" class="googles-cart pgoogles-cart">
+																	<i class="fas fa-cart-plus"></i>
+																</button>
+															</form>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gd-box-info text-center">
+									<div class="product-men women_two bot-gd">
+										<div class="product-googles-info slide-img googles">
+											<div class="men-pro-item">
+												<div class="men-thumb-item">
+													<img src="images/s6.jpg" class="img-fluid" alt="">
+													<div class="men-cart-pro">
+														<div class="inner-men-cart-pro">
+															<a href="single.php" class="link-product-add-cart">Quick View</a>
+														</div>
+													</div>
+</div>
+												<div class="item-info-product">
+
+													<div class="info-product-price">
+														<div class="grid_meta">
+															<div class="product_price">
+																<h4>
+																	<a href="single.php">RAY BAN JUNIOR </a>
+																</h4>
+																<div class="grid-price mt-2"><span class="money ">340.00 DT</span></div>
+															</div>
+															<ul class="stars">
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+														<div class="googles single-item hvr-outline-out">
+															<form action="ajouterpannier.php?refe=<?=9?>" method="post">
+																<input type="hidden" name="cmd" value="_cart">
+																<input type="hidden" name="add" value="1">
+																<input type="hidden" name="googles_item" value="RAY BAN JUNIOR">
+																<input type="hidden" name="amount" value="340.00">
+																<button type="submit" class="googles-cart pgoogles-cart">
+																	<i class="fas fa-cart-plus"></i>
+																</button>
+															</form>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gd-box-info text-center">
+									<div class="product-men women_two bot-gd">
+										<div class="product-googles-info slide-img googles">
+											<div class="men-pro-item">
+												<div class="men-thumb-item">
+													<img src="images/s7.jpg" class="img-fluid" alt="">
+													<div class="men-cart-pro">
+														<div class="inner-men-cart-pro">
+															<a href="single.php" class="link-product-add-cart">Quick View</a>
+														</div>
+													</div>
+</div>
+												<div class="item-info-product">
+
+													<div class="info-product-price">
+														<div class="grid_meta">
+															<div class="product_price">
+																<h4>
+																	<a href="single.php">RAY BAN JUNIOR </a>
+																</h4>
+																<div class="grid-price mt-2"><span class="money ">445.00 DT</span></div>
+															</div>
+															<ul class="stars">
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+														<div class="googles single-item hvr-outline-out">
+															<form action="ajouterpannier.php?refe=<?=10?>" method="post">
+																<input type="hidden" name="cmd" value="_cart">
+																<input type="hidden" name="add" value="1">
+																<input type="hidden" name="googles_item" value="RAY BAN JUNIOR">
+																<input type="hidden" name="amount" value="445.00">
+																<button type="submit" class="googles-cart pgoogles-cart">
+																	<i class="fas fa-cart-plus"></i>
+																</button>
+															</form>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gd-box-info text-center">
+									<div class="product-men women_two bot-gd">
+										<div class="product-googles-info slide-img googles">
+											<div class="men-pro-item">
+												<div class="men-thumb-item">
+													<img src="images/s8.jpg" class="img-fluid" alt="">
+													<div class="men-cart-pro">
+														<div class="inner-men-cart-pro">
+															<a href="single.php" class="link-product-add-cart">Quick View</a>
+														</div>
+													</div>
+</div>
+												<div class="item-info-product">
+
+													<div class="info-product-price">
+														<div class="grid_meta">
+															<div class="product_price">
+																<h4>
+																	<a href="single.php">LACOSTE JUNIOR </a>
+																</h4>
+																<div class="grid-price mt-2"><span class="money">281.000</span>
+																<span class="money">DT</span></div>
+															</div>
+															<ul class="stars">
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+														<div class="googles single-item hvr-outline-out">
+															<form action="ajouterpannier.php?refe=<?=11?>" method="post">
+																<input type="hidden" name="cmd" value="_cart">
+																<input type="hidden" name="add" value="1">
+																<input type="hidden" name="googles_item" value="LACOSTE JUNIOR">
+																<input type="hidden" name="amount" value="281.00">
+																<button type="submit" class="googles-cart pgoogles-cart">
+																	<i class="fas fa-cart-plus"></i>
+																</button>
+															</form>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gd-box-info text-center">
+									<div class="product-men women_two bot-gd">
+										<div class="product-googles-info slide-img googles">
+											<div class="men-pro-item">
+												<div class="men-thumb-item">
+													<img src="images/s9.jpg" class="img-fluid" alt="">
+													<div class="men-cart-pro">
+														<div class="inner-men-cart-pro">
+															<a href="single.php" class="link-product-add-cart">Quick View</a>
+														</div>
+													</div>
+</div>
+												<div class="item-info-product">
+
+													<div class="info-product-price">
+														<div class="grid_meta">
+															<div class="product_price">
+																<h4>
+																	<a href="single.php">Jerry Rectangular </a>
+																</h4>
+																<div class="grid-price mt-2"><span class="money ">525.00 DT</span></div>
+															</div>
+															<ul class="stars">
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+														<div class="googles single-item hvr-outline-out">
+															<form action="ajouterpannier.php?refe=<?=12?>" method="post">
+																<input type="hidden" name="cmd" value="_cart">
+																<input type="hidden" name="add" value="1">
+																<input type="hidden" name="googles_item" value="Jerry Rectangular ">
+																<input type="hidden" name="amount" value="525.00">
+																<button type="submit" class="googles-cart pgoogles-cart">
+																	<i class="fas fa-cart-plus"></i>
+																</button>
+															</form>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gd-box-info text-center">
+									<div class="product-men women_two bot-gd">
+										<div class="product-googles-info slide-img googles">
+											<div class="men-pro-item">
+												<div class="men-thumb-item">
+													<img src="images/s10.jpg" class="img-fluid" alt="">
+													<div class="men-cart-pro">
+														<div class="inner-men-cart-pro">
+															<a href="single.php" class="link-product-add-cart">Quick View</a>
+														</div>
+													</div>
+</div>
+												<div class="item-info-product">
+
+													<div class="info-product-price">
+														<div class="grid_meta">
+															<div class="product_price">
+																<h4>
+																	<a href="single.php">Herdy Wayfarer </a>
+																</h4>
+																<div class="grid-price mt-2"><span class="money ">325.00 DT</span></div>
+															</div>
+															<ul class="stars">
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+														<div class="googles single-item hvr-outline-out">
+															<form action="ajouterpannier.php?refe=<?=13?>" method="post">
+																<input type="hidden" name="cmd" value="_cart">
+																<input type="hidden" name="add" value="1">
+																<input type="hidden" name="googles_item" value="Herdy Wayfarer">
+																<input type="hidden" name="amount" value="325.00">
+																<button type="submit" class="googles-cart pgoogles-cart">
+																	<i class="fas fa-cart-plus"></i>
+																</button>
+															</form>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /testimonials -->
+				<div class="testimonials py-lg-4 py-3 mt-4">
+					<div class="testimonials-inner py-lg-4 py-3">
+						<h3 class="tittle-w3layouts text-center my-lg-4 my-4">Tesimonials</h3>
+						<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner" role="listbox">
+								<div class="carousel-item active">
+									<div class="testimonials_grid text-center">
+										<h3>Anamaria
+											<span>Customer</span>
+										</h3>
+										<label>United States</label>
+										<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
+											Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="testimonials_grid text-center">
+										<h3>Esmeralda
+											<span>Customer</span>
+										</h3>
+										<label>United States</label>
+										<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
+											Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="testimonials_grid text-center">
+										<h3>Gretchen
+											<span>Customer</span>
+										</h3>
+										<label>United States</label>
+										<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
+											Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+									</div>
+								</div>
+								<a class="carousel-control-prev test" href="#carouselExampleControls" role="button" data-slide="prev">
+									<span class="fas fa-long-arrow-alt-left"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next test" href="#carouselExampleControls" role="button" data-slide="next">
+									<span class="fas fa-long-arrow-alt-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //testimonials -->
+				<div class="row galsses-grids pt-lg-5 pt-3">
+					<div class="col-lg-6 galsses-grid-left">
+						<figure class="effect-lexi">
+							<img src="images/banner5.jpg" alt="" class="img-fluid">
+							<figcaption>
+								<h3>Editor's
+									<span>Pick</span>
+								</h3>
+								<p> Express your style now.</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-lg-6 galsses-grid-left">
+						<figure class="effect-lexi">
+							<img src="images/banner6.jpg" alt="" class="img-fluid">
+							<figcaption>
+								<h3>Editor's
+									<span>Pick</span>
+								</h3>
+								<p>Express your style now.</p>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- /grids -->
+				<div class="bottom-sub-grid-content py-lg-5 py-3">
+					<div class="row">
+						<div class="col-lg-4 bottom-sub-grid text-center">
+							<div class="bt-icon">
+
+								<span class="far fa-hand-paper"></span>
+							</div>
+
+							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Satisfaction Guaranteed</h4>
+							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<p>
+								<a href="shop.php" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							</p>
+						</div>
+						<!-- /.col-lg-4 -->
+						<div class="col-lg-4 bottom-sub-grid text-center">
+							<div class="bt-icon">
+								<span class="fas fa-rocket"></span>
+							</div>
+
+							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Fast Shipping</h4>
+							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<p>
+								<a href="shop.php" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							</p>
+						</div>
+						<!-- /.col-lg-4 -->
+						<div class="col-lg-4 bottom-sub-grid text-center">
+							<div class="bt-icon">
+								<span class="far fa-sun"></span>
+							</div>
+
+							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">UV Protection</h4>
+							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<p>
+								<a href="shop.php" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							</p>
+						</div>
+						<!-- /.col-lg-4 -->
+					</div>
+				</div>
+				<!-- //grids -->
+				<!-- /clients-sec -->
+				<div class="testimonials p-lg-5 p-3 mt-4">
+					<div class="row last-section">
+						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
+							<div class="mail-grid-icon text-center">
+								<i class="fas fa-gift"></i>
+							</div>
+							<div class="mail-grid-text-info">
+								<h3>Genuine Product</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
+							<div class="mail-grid-icon text-center">
+								<i class="fas fa-shield-alt"></i>
+							</div>
+							<div class="mail-grid-text-info">
+								<h3>Secure Products</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
+							<div class="mail-grid-icon text-center">
+								<i class="fas fa-dollar-sign"></i>
+							</div>
+							<div class="mail-grid-text-info">
+								<h3>Cash on Delivery</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
+							<div class="mail-grid-icon text-center">
+								<i class="fas fa-truck"></i>
+							</div>
+							<div class="mail-grid-text-info">
+								<h3>Easy Delivery</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //clients-sec -->
+			</div>
+		</div>
+	</section>
+	<!-- about -->
+	<!--footer -->
+	<footer class="py-lg-5 py-3">
+		<div class="container-fluid px-lg-5 px-3">
+			<div class="row footer-top-w3layouts">
+				<div class="col-lg-3 footer-grid-w3ls">
+					<div class="footer-title">
+						<h3>About Us</h3>
+					</div>
+					<div class="footer-text">
+						<p>Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget consectetur sed, convallis at
+							tellus. Nulla porttitor accumsana tincidunt.</p>
+						<ul class="footer-social text-left mt-lg-4 mt-3">
+
+							<li class="mx-2">
+								<a href="deco.php">
+									<span class="fab fa-facebook-f"></span>
+								</a>
+							</li>
+							<li class="mx-2">
+								<a href="#">
+									<span class="fab fa-twitter"></span>
+								</a>
+							</li>
+							<li class="mx-2">
+								<a href="#">
+									<span class="fab fa-google-plus-g"></span>
+								</a>
+							</li>
+							<li class="mx-2">
+								<a href="#">
+									<span class="fab fa-linkedin-in"></span>
+								</a>
+							</li>
+							<li class="mx-2">
+								<a href="#">
+									<span class="fas fa-rss"></span>
+								</a>
+							</li>
+							<li class="mx-2">
+								<a href="#">
+									<span class="fab fa-vk"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 footer-grid-w3ls">
+					<div class="footer-title">
+						<h3>Get in touch</h3>
+					</div>
+					<div class="contact-info">
+						<h4>Location :</h4>
+						<p>Manar City 3rd floor,Tunis.</p>
+						<div class="phone">
+							<h4>Contact :</h4>
+							<p>Phone : +21655996989</p>
+							<p>Email :
+								<a>eyezone@gmail.com</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 footer-grid-w3ls">
+					<div class="footer-title">
+						<h3>Quick Links</h3>
+					</div>
+					<ul class="links">
+						<li>
+							<a href="index.php">Home</a>
+						</li>
+						<li>
+							<a href="about.php">About</a>
+						</li>
+						<li>
+							<a href="404.php">Error</a>
+						</li>
+						<li>
+							<a href="shop.php">Shop</a>
+						</li>
+						<li>
+							<a href="contact.php">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-3 footer-grid-w3ls">
+					<div class="footer-title">
+						<h3>Sign up for your offers</h3>
+					</div>
+					<div class="footer-text">
+						<p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+						<form action="#" method="post">
+							<input class="form-control" type="email" name="Email" placeholder="Enter your email..." required="">
+							<button class="btn1">
+								<i class="far fa-envelope" aria-hidden="true"></i>
+							</button>
+							<div class="clearfix"> </div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="copyright-w3layouts mt-4">
+				<p class="copy-right text-center ">&copy; 2019 EyeZone | Design by
+					<a> Techno-crea </a>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+	<!--jQuery-->
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<!-- newsletter modal -->
+	<!-- Modal -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-center p-5 mx-auto mw-100">
+					<h6>Join our newsletter and get</h6>
+					<h3>50% Off for your first Pair of Eye wear</h3>
+					<div class="login newsletter">
+						<form action="#" method="post">
+							<div class="form-group">
+								<label class="mb-2">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="" required="">
+							</div>
+							<button type="submit" class="btn btn-primary submit mb-4">Get 50% Off</button>
+						</form>
+						<p class="text-center">
+							<a href="#">No thanks I want to pay full Price</a>
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$("#myModal").modal();
+		});
+	</script>
+	<!-- // modal -->
+
+	<!--search jQuery-->
+	<!-- /////// 
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/classie-search.js"></script>
+	<script src="js/demo1-search.js"></script>
+	<!--//search jQuery-->
+	<!-- cart-js -->
+<!--	<script src="js/minicart.js"></script>
+	<script>
+		googles.render();
+
+		googles.cart.on('googles_checkout', function (evt) {
+			var items, len, i;
+
+			if (this.subtotal() > 0) {
+				items = this.items();
+
+				for (i = 0, len = items.length; i < len; i++) {}
+			}
+		});
+	</script>
+	<!-- //cart-js -->
+	<script>
+		$(document).ready(function () {
+			$(".button-log a").click(function () {
+				$(".overlay-login").fadeToggle(200);
+				$(this).toggleClass('btn-open').toggleClass('btn-close');
+			});
+		});
+		$('.overlay-close1').on('click', function () {
+			$(".overlay-login").fadeToggle(200);
+			$(".button-log a").toggleClass('btn-open').toggleClass('btn-close');
+			open = false;
+		});
+	</script>
+	<!-- carousel -->
+	<!-- Count-down -->
+	<script src="js/simplyCountdown.js"></script>
+	<link href="css/simplyCountdown.css" rel='stylesheet' type='text/css' />
+	<script>
+		var d = new Date();
+		simplyCountdown('simply-countdown-custom', {
+			year: d.getFullYear(),
+			month: d.getMonth() + 2,
+			day: 25
+		});
+	</script>
+	<!--// Count-down -->
+	<script src="js/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 10,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					600: {
+						items: 2,
+						nav: false
+					},
+					900: {
+						items: 3,
+						nav: false
+					},
+					1000: {
+						items: 4,
+						nav: true,
+						loop: false,
+						margin: 20
+					}
+				}
+			})
+		})
+	</script>
+
+	<!-- //end-smooth-scrolling -->
+
+
+	<!-- dropdown nav -->
+	<script>
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
+	</script>
+	<!-- //dropdown nav -->
+  <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            /*
+            						var defaults = {
+            							  containerID: 'toTop', // fading element id
+            							containerHoverID: 'toTopHover', // fading element hover id
+            							scrollSpeed: 1200,
+            							easingType: 'linear' 
+            						 };
+            						*/
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!--// end-smoth-scrolling -->
+
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<!-- js file -->
+</body>
+
 </html>
+<?php
+}
+else
+{
+    echo "you need to connect";
+
+}
+
+?> 
+
+<a href="connex.php">connect here</a>
