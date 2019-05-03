@@ -1,7 +1,16 @@
 <?php
 
 include "C:/xampp/htdocs/EyeZone/core/livreurC.php";
+include "Nexmo/src/NexmoMessage.php" ;
+    // Step 1: Declare new NexmoMessage.
+    $nexmo_sms = new NexmoMessage('233fad24','MDGwoBLamLhA1rrl');
 
+    // Step 2: Use sendText( $to, $from, $message ) method to send a message. 
+    $info = $nexmo_sms->sendText( '21653274814', 'EYEZONE', 'Le livreur a été affecté à cette livraison' );
+
+    // Step 3: Display an overview of the message
+
+    
 
 $livraison= new livreurC();
 $ville=$livraison->afficherville();
@@ -12,6 +21,7 @@ foreach ($nb as $li) {$nombre=$li['nblivraison'];}
 
     $livraison->AffecterLivreurLivraison($_GET['idLivreur'],$_GET['idLivraison']);
     $livraison->Livreur_INC_nblivraison($_GET['idLivreur'],$nombre);
+ $nexmo_sms->displayOverview($info);
 
 header('Location: livraison.php');
 
@@ -36,7 +46,7 @@ if (isset($_POST['ville']) )
 
 $l = new livreurC();
 $l->AffecterVilleLivreur($id,$_POST['ville']);
-
+$nexmo_sms->displayOverview($info);
 header('Location: afficherlivreur.php');
 
 }

@@ -45,7 +45,7 @@ chart.render();
 </script>
 
 <div class="agile-grids"> 
-<div id="chartContainer" style="height: 350px; width: 85%; margin-left: 50px" align="center"></div>
+<div id="chartContainer" style="height: 200px; width: 50%; margin-left: 20px" align="center"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </div>
 <script>
@@ -61,4 +61,4 @@ chart.render();
        });
        
     });
-</script>
+</script>  

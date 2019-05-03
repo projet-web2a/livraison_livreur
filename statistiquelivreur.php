@@ -13,12 +13,12 @@ $db=Config::getConnexion();
     $req3= $db->query("SELECT COUNT(*) as nb3 FROM livraison WHERE YEAR(dateLivraison )=YEAR(sysdate())-1  " );
     $nb3 = $req3->fetch();
 */
-    $req4= $db->query("SELECT COUNT(*) as nb4 FROM livreur WHERE  Month(nblivraison )=Month(sysdate()) ");
+    $req4= $db->query("SELECT COUNT(*) as nb4 FROM livreur WHERE  Month(nblivraison )=YEAR(sysdate()) ");
     $nb4 = $req4->fetch();
 
 
 
-$dataPoints = array(array("label"=> date("m"), "m"=> intval($nb4['nb4'])));
+$dataPoints = array(array("label"=> date("Y"), "y"=> intval($nb4['nb4'])));
   
 ?>
 <script>
@@ -45,7 +45,7 @@ chart.render();
 </script>
 
 <div class="agile-grids"> 
-<div id="chartContainer" style="height: 350px; width: 85%; margin-left: 50px" align="center"></div>
+<div id="chartContainer" style="height: 400px; width: 120%; margin-left:200px" align="center"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </div>
 <script>

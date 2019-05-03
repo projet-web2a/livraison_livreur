@@ -22,7 +22,7 @@ include "C:/xampp/htdocs/EyeZone/entites/livreur.php";
 	$nexmo_sms = new NexmoMessage('233fad24','MDGwoBLamLhA1rrl');
 
 	// Step 2: Use sendText( $to, $from, $message ) method to send a message. 
-	$info = $nexmo_sms->sendText( '21653274814', 'Cazasport', 'Le livreur a ete ajouté' );
+	$info = $nexmo_sms->sendText( '21653274814', 'EYEZONE', 'Le livreur a ete ajouté' );
 
 	// Step 3: Display an overview of the message
 
